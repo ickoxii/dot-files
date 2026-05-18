@@ -99,6 +99,8 @@ cmd-ctrl-0 = ['move-node-to-workspace 10', 'workspace 10']
 ctrl-cmd-f = '''exec-and-forget open -na Firefox'''
 ctrl-cmd-g = '''exec-and-forget open -na Ghostty'''
 ctrl-cmd-d = '''exec-and-forget open -na Docker\ Desktop'''
+ctrl-cmd-o = '''exec-and-forget open -na Obsidian'''
+ctrl-cmd-s = '''exec-and-forget open -na Spotify'''
 
 # ⎧                                        ⎫
 # ⎨  Service Mode Keymaps                  ⎬
@@ -159,11 +161,12 @@ if.app-id = 'com.anthropic.claudefordesktop'
 run = ['move-node-to-workspace 3']
 
 # ⎧                                        ⎫
-# ⎨  4. Personal Browser, Games            ⎬
+# ⎨  4. Notes                              ⎬
 # ⎩                                        ⎭
+
 [[on-window-detected]]
-if.app-id = 'com.google.Chrome'
-run = 'move-node-to-workspace 4'
+if.app-id = 'md.obsidian'
+run = ['move-node-to-workspace 4']
 
 # ⎧                                        ⎫
 # ⎨  5. Workstations                       ⎬
@@ -196,10 +199,6 @@ run = 'move-node-to-workspace 6'
 if.app-id = 'com.microsoft.Excel'
 run = 'move-node-to-workspace 6'
 
-[[on-window-detected]]
-if.app-id = 'md.obsidian'
-run = ['move-node-to-workspace 3']
-
 # ⎧                                        ⎫
 # ⎨  7. Messaging                          ⎬
 # ⎩                                        ⎭
@@ -213,6 +212,10 @@ run = 'move-node-to-workspace 7'
 
 [[on-window-detected]]
 if.app-id = 'com.microsoft.teams2'
+run = 'move-node-to-workspace 7'
+
+[[on-window-detected]]
+if.app-id = 'com.google.Chrome'
 run = 'move-node-to-workspace 7'
 
 # ⎧                                        ⎫

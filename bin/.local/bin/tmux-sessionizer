@@ -24,6 +24,10 @@ if [[ $# -eq 1 ]]; then
 else
   selected=$(find \
     ~/work/spring \
+    ~/work/spring/clients \
+    ~/work/spring/dependencies \
+    ~/work/spring/tools \
+    ~/work/spring/worktrees \
     ~/projects \
     ~/projects/active \
     ~/projects/archive \
